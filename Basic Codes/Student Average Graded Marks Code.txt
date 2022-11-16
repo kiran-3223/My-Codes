@@ -1,0 +1,19 @@
+def main(m1,m2,m3):
+  total = m1+m2+m3
+  avg = total/3
+  
+  if avg >=70:
+    return 'DISTINCTION'
+  elif avg>=60 and avg<70:
+    return 'GOOD'
+  elif avg>=50 and avg<60:
+    return 'AVERAGE'
+  elif avg>=40 and avg<50:
+    return 'POOR'
+  else:
+    return 'FAIL'
+    
+m1 = int(input())
+m2 = int(input())
+m3 = int(input())
+print(main(m1,m2,m3))
