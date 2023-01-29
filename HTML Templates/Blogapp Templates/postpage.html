@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostPage</title>
+    <style>
+        .header{
+            background-color: rgb(133, 245, 133);
+            margin:-10px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        body{
+            background: white;
+        }
+        h1{
+            text-align: center;
+        }
+        h3{
+            margin: 0%;
+            margin-top: 3%; 
+         }
+        #box{
+            width: 400px;
+        }
+        #Content{
+            height: 100px;
+            width: 400px;
+            
+        }
+        #form{
+            background-color:white;
+            height: 325px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 5px 5px 5px 5px rgb(201, 189, 189);
+        }
+        #btn1{
+            display: inline-block;
+            background-color: green;
+            border-color: green;
+            color: white;
+            font-size: 16px;
+        }
+        #btn2{
+            margin-left: 212px;
+            background-color: rgb(252, 252, 0);
+            border-color: rgb(252, 252, 0);
+            font-size: 16px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="bi">
+            <a href="backtoindex">back to index</a>
+        </div>
+    </div>
+    <h1>Add Post</h1>
+    <div id="form">
+        <div>
+            <form action="addPost" method="post">
+                {% csrf_token %}
+
+                <h3 class="h3" >Title</h3>
+                <input type="text" id="box" name="title"><br>
+                <h3 class="h3">Categories</h3>
+                <input type="text" id="box" name="categories"><br>
+                <h3 class="h3">Content</h3>
+                <textarea id="Content" name="Content"></textarea><br><br>
+                <button id="btn1">Submit</button>
+                <a href="backtoindex"><button id="btn2">Cancel</button></a>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">KA <span>&#169</span></h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">CST Tool</a></li>
+                    <li><a href="#">HFSS Tool</a></li>
+                    <li><a href="#">MATLAB Tool</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch"type="search" name="" placeholder="Type here to search">
+                <a href="#"><button class="btn">search</button></a>
+            </div>
+            <div class="content">
+                <h1>Antennna Design&<br><span>Developement</span><br>Course</h1>
+                <p class="para">In this course you will learn about Antenna design sotware tools <br>This Course includes three design tools they are CST, HFSS & MATLAB<br><em>Network is everywhere</em></p>
+                <button class="btn2"><a href="#">JOIN US</a>
+            </div>
+           <div class="form">
+            <h2>Login Here</h2>
+            <form onsubmit="return validate()" action="Saikiran.html">
+            <input id="email" type="text" name="email" placeholder="Enter email here">
+            <input id="pword" type="password" name=""password" placeholder="Enter password here">
+            <button class="btn3" type="submit"><a href="#">Login</a></button>
+            <p class="link">Don't have an account ?<br>
+            <a href="#">Signup Here</a></p>
+            </form>
+           </div>
+        </div>
+    </div>
+</body>
+<script>
+    function validate()
+    {
+      var Username = document.getElementById("email");
+      var password = document.getElementById("pword");
+      
+      if(Username.value.trim()=="")
+      {
+        alert("Blank Username");
+        Username.style.border = "solid 3px red";
+        return false;
+       
+      }
+      else if(password.value.trim()=="")
+      {
+        alert("Blank Password");
+        password.style.border = "solid 3px red";
+        return false;
+  
+      }
+      else if(password.value.trim().length<5)
+      {
+        alert("Password too Short");
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+  
+    }
+  </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        .header{
+            background-color: rgb(133, 245, 133);
+            margin:-10px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        body{
+            background: white;
+            border-style: dotted;
+        }
+        .btn{
+            float: right;
+            margin: -10px;
+        }
+        th{
+            margin-bottom: 50%;
+        }
+    </style>
+</head>
+<body>
+    <form action="onClick">
+        <div class="header">
+            <div class="btn">
+                <input type="submit" value="New post">
+            </div>
+        </div>
+    </form>
+        <ol>
+            {% for post in Posts_list %}
+                 <a href="viewpage"><li>{{ post.title }}</li></a>
+            {% endfor %}
+        </ol>
+</body>
+</html>
